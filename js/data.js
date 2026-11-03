@@ -123,6 +123,7 @@ window.SITE_DATA = {
     {
       "categoria": "DESARROLLO WEB",
       "titulo": "MDN Web Docs",
+   "icono": "assets/icons/mdn.jpg",
       "descripcion": "Referencia sobre HTML, CSS y JavaScript.",
       "url": "https://developer.mozilla.org/es/docs/Web",
       "id": "mdn",
@@ -132,6 +133,7 @@ window.SITE_DATA = {
     {
       "categoria": "COMPUTACIÓN FÍSICA",
       "titulo": "MakeCode micro:bit",
+   "icono": "assets/icons/microbit.png",
       "descripcion": "Programación visual y simulador para micro:bit.",
       "url": "https://makecode.microbit.org/",
       "id": "makecode",
@@ -141,6 +143,7 @@ window.SITE_DATA = {
     {
       "categoria": "APPS",
       "titulo": "MIT App Inventor",
+   "icono": "assets/icons/mitai.png",
       "descripcion": "Entorno visual para construir aplicaciones.",
       "url": "https://appinventor.mit.edu/",
       "id": "appinventor",
@@ -153,6 +156,7 @@ window.SITE_DATA = {
 {
   "categoria": "APPS",
   "titulo": "HTML Color Codes",
+   "icono": "assets/icons/htmlcolorcodes.jpg",
   "descripcion": "Selector de colores y paletas con códigos HEX, RGB y HSL para diseño web.",
   "url": "https://htmlcolorcodes.com/",
   "id": "htmlcolorcodes",
@@ -162,6 +166,7 @@ window.SITE_DATA = {
 {
   "categoria": "APPS",
   "titulo": "Layerling",
+   "icono": "assets/icons/layerling.svg",
   "descripcion": "Herramienta CAD en el navegador para diseñar modelos destinados a impresión 3D.",
   "url": "https://layerling.com/",
   "id": "layerling",
@@ -171,6 +176,7 @@ window.SITE_DATA = {
 {
   "categoria": "APPS",
   "titulo": "Aprende Arduino",
+   "icono": "assets/icons/arduino.png",
   "descripcion": "Lecciones interactivas en 3D para iniciarse en Arduino, circuitos y componentes electrónicos.",
   "url": "https://learn-arduino-red.vercel.app/es/",
   "id": "learnarduino",
@@ -180,6 +186,7 @@ window.SITE_DATA = {
 {
   "categoria": "APPS",
   "titulo": "ESP32 Labs",
+   "icono": "assets/icons/esp32.png",
   "descripcion": "Guía interactiva de ESP32-S3 con prácticas, simuladores y explicaciones del código.",
   "url": "https://esp-labs-web.vercel.app/#/?lang=es",
   "id": "esplabs",
@@ -189,6 +196,7 @@ window.SITE_DATA = {
 {
   "categoria": "APPS",
   "titulo": "Nuclear Reactor Simulator",
+   "icono": "assets/icons/dalton.png",
   "descripcion": "Simulador educativo para explorar el funcionamiento y control de un reactor nuclear.",
   "url": "https://dalton-nrs.manchester.ac.uk/",
   "id": "daltonnrs",
@@ -197,6 +205,7 @@ window.SITE_DATA = {
 },
 {
   "categoria": "APPS",
+   "icono": "assets/icons/picuino.png",
   "titulo": "Picuino · Simulador de neumática",
   "descripcion": "Editor y simulador de circuitos neumáticos con válvulas, cilindros y ejemplos.",
   "url": "https://www.picuino.com/neumatic/index.html",
@@ -206,6 +215,7 @@ window.SITE_DATA = {
 },
 {
   "categoria": "APPS",
+   "icono": "assets/icons/circuits.png",
   "titulo": "Falstad CircuitJS",
   "descripcion": "Editor y simulador de circuitos electrónicos con visualización animada de tensiones y corrientes.",
   "url": "https://www.falstad.com/circuit/circuitjs.html",
