@@ -94,6 +94,7 @@ Para publicar un proyecto HTML local, guarda sus archivos en una carpeta y usa u
   id: "referencia-unica",
   titulo: "Nombre de la web",
   descripcion: "Por qué puede resultar útil.",
+  icono: "assets/icons/nombre-del-icono.png", // Opcional; ruta exacta del archivo subido.
   autor: "Autor, entidad o comunidad responsable",
   categoria: "DESARROLLO WEB",
   fechaAlta: "",
@@ -101,10 +102,30 @@ Para publicar un proyecto HTML local, guarda sus archivos en una carpeta y usa u
 }
 ```
 
-El catálogo permite buscar por título, autor, descripción o categoría, y filtrar por categoría. Se mantienen las tres referencias de la versión anterior: MDN Web Docs, MakeCode micro:bit y MIT App Inventor.
+El catálogo permite buscar por título, autor, descripción o categoría, y filtrar por categoría. Las diez referencias actuales incluyen las siete incorporadas el 03/11/2026.
+
+### Publicar una nueva web o un icono
+
+1. Si la ficha lleva icono, sube primero la imagen a `assets/icons/`. Usa nombres sencillos y conserva la extensión real: `png`, `jpg`, `webp` o `svg`.
+2. Edita `js/data.js`, dentro de `webs`: añade una ficha con un `id` único y su `fechaAlta` real (`AAAA-MM-DD`). Separa las fichas con comas.
+3. En `icono`, escribe la ruta exacta, respetando mayúsculas y extensión. Ejemplo actual: `assets/icons/layerling.svg`. Puedes dejar el campo vacío u omitirlo para usar el icono neutro.
+4. Guarda los cambios en `main` y espera a que el último proceso **pages build and deployment** termine correctamente en **Actions**.
+5. Comprueba el total y las imágenes en `webs.html`. La portada muestra solo las tres incorporaciones más recientes; una ficha sin fecha queda detrás de las que sí la tienen.
+
+**No hay que editar las cuatro páginas HTML ni cambiar números de versión al añadir fichas, corregir textos o reemplazar imágenes.** Si solo corriges una ficha, conserva su fecha de incorporación.
+
+### Actualización automática de archivos
+
+Las cuatro páginas tienen una pequeña cabecera de Jekyll y usan `site.github.build_revision` para sus referencias a `data.js`, `app.js` y `styles.css`. GitHub Pages ya ejecuta Jekyll en la publicación de este repositorio; no se añade otro servicio, dependencia o proceso manual.
+
+Cada nueva publicación produce automáticamente una URL de recurso distinta. La misma revisión se aplica a los iconos locales desde `app.js`, incluso cuando se reemplaza una imagen manteniendo su nombre. Las URLs externas conservan sus propios parámetros. Las fichas sin imagen o con un archivo que no carga muestran un icono neutro.
+
+La revisión sirve para actualizar la caché; `fechaAlta` sirve únicamente para ordenar las fichas. Una nueva publicación requiere que el visitante cargue o recargue la página: una pestaña ya abierta no se modifica sola. La actualización sigue dependiendo de que GitHub Pages haya terminado de publicar.
+
+Conserva las cabeceras iniciales de Jekyll y las expresiones Liquid de las páginas. Para una previsualización local idéntica a producción hay que procesarlas con Jekyll; `js/data.js` sigue siendo JavaScript editable normal.
 
 ## Publicación y límites
 
-El repositorio existente publica desde `main` con GitHub Pages. No requiere instalación ni compilación. Mantén `index.html`, las tres páginas de catálogo y las carpetas `assets`, `css` y `js` en la misma raíz.
+El repositorio existente publica desde `main` con GitHub Pages. La generación automática de versiones aprovecha el paso de Jekyll que ya ejecuta GitHub; el editor no necesita instalar ni compilar nada. Mantén `index.html`, las tres páginas de catálogo y las carpetas `assets`, `css` y `js` en la misma raíz.
 
 No hay base de datos, panel de administración, cuentas ni subidas públicas. El contenido se edita en `js/data.js`. Los archivos de `ejemplos/` y `css/styles_v1.css` se conservan; el nuevo diseño no los utiliza. No se publican claves ni datos identificativos del alumnado en las fichas.
