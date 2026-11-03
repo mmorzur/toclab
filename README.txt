@@ -7,5 +7,5 @@ Contenidos de los tres catálogos: js/data.js.
 Filtros de proyectos: curso académico, nivel y grupo.
 La portada muestra las tres últimas incorporaciones de cada catálogo.
 
-Las tres fichas del alumnado siguen siendo ejemplos; sus grupos se desconocen.
-Las cuatro apps enlazadas tienen acceso restringido.
+Los ejemplos del alumnado se han retirado; el catálogo muestra un aviso hasta publicar proyectos reales.
+Lectura Viva utiliza cuenta docente; las otras tres aplicaciones son pilotos con acceso restringido.
