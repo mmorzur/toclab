@@ -157,7 +157,7 @@ window.SITE_DATA = {
   "url": "https://htmlcolorcodes.com/",
   "id": "htmlcolorcodes",
   "autor": "Dixon & Moe",
-  "fechaAlta": ""
+  "fechaAlta": "2026-11-03"
 },
 {
   "categoria": "APPS",
@@ -166,7 +166,7 @@ window.SITE_DATA = {
   "url": "https://layerling.com/",
   "id": "layerling",
   "autor": "Colaboradores de layerling",
-  "fechaAlta": ""
+  "fechaAlta": "2026-11-03"
 },
 {
   "categoria": "APPS",
@@ -175,7 +175,7 @@ window.SITE_DATA = {
   "url": "https://learn-arduino-red.vercel.app/es/",
   "id": "learnarduino",
   "autor": "DilumSanjaya",
-  "fechaAlta": ""
+  "fechaAlta": "2026-11-03"
 },
 {
   "categoria": "APPS",
@@ -184,7 +184,7 @@ window.SITE_DATA = {
   "url": "https://esp-labs-web.vercel.app/#/?lang=es",
   "id": "esplabs",
   "autor": "agharsallah",
-  "fechaAlta": ""
+  "fechaAlta": "2026-11-03"
 },
 {
   "categoria": "APPS",
@@ -193,7 +193,7 @@ window.SITE_DATA = {
   "url": "https://dalton-nrs.manchester.ac.uk/",
   "id": "daltonnrs",
   "autor": "Dalton Nuclear Institute · Universidad de Manchester / PlayGen",
-  "fechaAlta": ""
+  "fechaAlta": "2026-11-03"
 },
 {
   "categoria": "APPS",
@@ -202,7 +202,7 @@ window.SITE_DATA = {
   "url": "https://www.picuino.com/neumatic/index.html",
   "id": "picuinoneumatic",
   "autor": "Carlos Félix Pardo Martín",
-  "fechaAlta": ""
+  "fechaAlta": "2026-11-03"
 },
 {
   "categoria": "APPS",
@@ -211,7 +211,7 @@ window.SITE_DATA = {
   "url": "https://www.falstad.com/circuit/circuitjs.html",
   "id": "falstadcircuitjs",
   "autor": "Paul Falstad e Iain Sharp",
-  "fechaAlta": ""
+  "fechaAlta": "2026-11-03"
 }
      
   ]
