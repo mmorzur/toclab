@@ -1,6 +1,9 @@
 (() => {
   'use strict';
   const data = window.SITE_DATA || {};
+  // GitHub Pages injects one automatic revision for data, code, styles and icons.
+  const build = document.querySelector('meta[name="toclab-build"]')?.content || '';
+  const assetVersion = /^[a-f\d]{7,64}$/i.test(build) ? build : '';
   const page = document.body.dataset.page;
   const $ = id => document.getElementById(id);
   const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -35,13 +38,29 @@
     return `<article class="app-card"><div class="app-card-top"><span class="app-icon">${icon(app.icono)}</span><div class="app-labels"><span class="app-category">${escapeHTML(app.categoria)}</span><span class="app-status ${pilot ? 'is-pilot' : 'is-published'}">${status}</span></div></div><h3>${escapeHTML(app.titulo)}</h3><p>${escapeHTML(app.resumen)}</p><div class="app-card-bottom"><span class="access">${access}</span>${link(app.url,pilot ? 'Abrir piloto' : 'Abrir app') || '<span class="access">Enlace pendiente</span>'}</div></article>`;
   };
   const projectCard = project => `<article class="project-card"><div class="project-art" data-icon="${escapeHTML(project.icono)}"><span class="art-label">${escapeHTML(project.materia)}</span>${art(project.icono)}<span class="art-cross" aria-hidden="true">+</span></div><div class="project-body"><div class="project-meta"><span>${escapeHTML(project.nivel)}${project.grupo ? ` · ${escapeHTML(project.grupo)}` : ''}</span><span>${escapeHTML(project.anio)}</span></div><h3>${escapeHTML(project.titulo)}</h3><p>${escapeHTML(project.resumen)}</p><div class="tags">${(project.etiquetas || []).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('')}</div><div class="project-bottom"><span class="sample-label">${project.ejemplo ? 'EJEMPLO' : escapeHTML(project.grupo ? `Grupo ${project.grupo}` : 'Grupo sin indicar')}</span><button type="button" class="detail-button" data-project="${escapeHTML(project.id)}" aria-label="Ver ficha de ${escapeHTML(project.titulo)}">Ver proyecto <span aria-hidden="true">↗</span></button></div></div></article>`;
+  const versionedAsset = raw => {
+    const src = safeURL(raw);
+    if (!src || !assetVersion) return src;
+    const url = new URL(src, document.baseURI);
+    if (url.origin === new URL(document.baseURI).origin) {
+      url.searchParams.set('v', assetVersion);
+    }
+    return url.href;
+  };
+  const fallbackWebIcon = () => `<span class="web-icon web-icon-fallback" aria-hidden="true">${icon('grid')}</span>`;
   const webIcon = web => {
-  const src = safeURL(web.icono);
-  return src
-    ? `<img class="web-icon" src="${escapeHTML(src)}"
-         width="28" height="28" alt="" loading="lazy">`
-    : '';
-};
+    const src = versionedAsset(web.icono);
+    return src
+      ? `<img class="web-icon" src="${escapeHTML(src)}" width="28" height="28" alt="" loading="lazy" decoding="async">`
+      : fallbackWebIcon();
+  };
+  // Failed image loads retain a neutral icon and leave the title and link usable.
+  document.addEventListener('error', event => {
+    const image = event.target;
+    if (image instanceof HTMLImageElement && image.classList.contains('web-icon')) {
+      image.outerHTML = fallbackWebIcon();
+    }
+  }, true);
   const webCard = (web,index) => `<article class="web-row"><span class="web-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><div>
   <h3 class="web-title">
   ${webIcon(web)}
