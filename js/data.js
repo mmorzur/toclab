@@ -146,6 +146,73 @@ window.SITE_DATA = {
       "id": "appinventor",
       "autor": "MIT App Inventor",
       "fechaAlta": ""
-    }
+    },
+     /*
+     */
+
+{
+  "categoria": "APPS",
+  "titulo": "HTML Color Codes",
+  "descripcion": "Selector de colores y paletas con códigos HEX, RGB y HSL para diseño web.",
+  "url": "https://htmlcolorcodes.com/",
+  "id": "htmlcolorcodes",
+  "autor": "Dixon & Moe",
+  "fechaAlta": ""
+},
+{
+  "categoria": "APPS",
+  "titulo": "Layerling",
+  "descripcion": "Herramienta CAD en el navegador para diseñar modelos destinados a impresión 3D.",
+  "url": "https://layerling.com/",
+  "id": "layerling",
+  "autor": "Colaboradores de layerling",
+  "fechaAlta": ""
+},
+{
+  "categoria": "APPS",
+  "titulo": "Aprende Arduino",
+  "descripcion": "Lecciones interactivas en 3D para iniciarse en Arduino, circuitos y componentes electrónicos.",
+  "url": "https://learn-arduino-red.vercel.app/es/",
+  "id": "learnarduino",
+  "autor": "DilumSanjaya",
+  "fechaAlta": ""
+},
+{
+  "categoria": "APPS",
+  "titulo": "ESP32 Labs",
+  "descripcion": "Guía interactiva de ESP32-S3 con prácticas, simuladores y explicaciones del código.",
+  "url": "https://esp-labs-web.vercel.app/#/?lang=es",
+  "id": "esplabs",
+  "autor": "agharsallah",
+  "fechaAlta": ""
+},
+{
+  "categoria": "APPS",
+  "titulo": "Nuclear Reactor Simulator",
+  "descripcion": "Simulador educativo para explorar el funcionamiento y control de un reactor nuclear.",
+  "url": "https://dalton-nrs.manchester.ac.uk/",
+  "id": "daltonnrs",
+  "autor": "Dalton Nuclear Institute · Universidad de Manchester / PlayGen",
+  "fechaAlta": ""
+},
+{
+  "categoria": "APPS",
+  "titulo": "Picuino · Simulador de neumática",
+  "descripcion": "Editor y simulador de circuitos neumáticos con válvulas, cilindros y ejemplos.",
+  "url": "https://www.picuino.com/neumatic/index.html",
+  "id": "picuinoneumatic",
+  "autor": "Carlos Félix Pardo Martín",
+  "fechaAlta": ""
+},
+{
+  "categoria": "APPS",
+  "titulo": "Falstad CircuitJS",
+  "descripcion": "Editor y simulador de circuitos electrónicos con visualización animada de tensiones y corrientes.",
+  "url": "https://www.falstad.com/circuit/circuitjs.html",
+  "id": "falstadcircuitjs",
+  "autor": "Paul Falstad e Iain Sharp",
+  "fechaAlta": ""
+}
+     
   ]
 };
