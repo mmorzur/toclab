@@ -1380,3 +1380,14 @@ dialog::backdrop {
 .app-status.is-pilot { color: #78540e; background: #fff1ce; }
 .lab-section .app-status.is-published { color: #c5f2dc; background: #294d49; }
 .lab-section .app-status.is-pilot { color: #ffe4a5; background: #504431; }
+
+/* Icono de reserva para fichas sin imagen o con un archivo no disponible. */
+.web-icon-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: #f0f3f7;
+  color: var(--muted);
+}
+.web-icon-fallback svg { width: 20px; height: 20px; }
