@@ -1360,6 +1360,19 @@ dialog::backdrop {
   .footer-credit { font-size: 10px; }
 }
 
+.web-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.web-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex: 0 0 28px;
+}
+
 /* Estado de las aplicaciones: publicación externa o piloto de ChatGPT. */
 .app-labels { display: flex; flex-direction: column; align-items: flex-end; gap: 7px; }
 .app-status { display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 4px; font-size: 10px; font-weight: 650; line-height: 1.6; white-space: nowrap; }
