@@ -35,6 +35,13 @@
     return `<article class="app-card"><div class="app-card-top"><span class="app-icon">${icon(app.icono)}</span><div class="app-labels"><span class="app-category">${escapeHTML(app.categoria)}</span><span class="app-status ${pilot ? 'is-pilot' : 'is-published'}">${status}</span></div></div><h3>${escapeHTML(app.titulo)}</h3><p>${escapeHTML(app.resumen)}</p><div class="app-card-bottom"><span class="access">${access}</span>${link(app.url,pilot ? 'Abrir piloto' : 'Abrir app') || '<span class="access">Enlace pendiente</span>'}</div></article>`;
   };
   const projectCard = project => `<article class="project-card"><div class="project-art" data-icon="${escapeHTML(project.icono)}"><span class="art-label">${escapeHTML(project.materia)}</span>${art(project.icono)}<span class="art-cross" aria-hidden="true">+</span></div><div class="project-body"><div class="project-meta"><span>${escapeHTML(project.nivel)}${project.grupo ? ` · ${escapeHTML(project.grupo)}` : ''}</span><span>${escapeHTML(project.anio)}</span></div><h3>${escapeHTML(project.titulo)}</h3><p>${escapeHTML(project.resumen)}</p><div class="tags">${(project.etiquetas || []).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join('')}</div><div class="project-bottom"><span class="sample-label">${project.ejemplo ? 'EJEMPLO' : escapeHTML(project.grupo ? `Grupo ${project.grupo}` : 'Grupo sin indicar')}</span><button type="button" class="detail-button" data-project="${escapeHTML(project.id)}" aria-label="Ver ficha de ${escapeHTML(project.titulo)}">Ver proyecto <span aria-hidden="true">↗</span></button></div></div></article>`;
+  const webIcon = web => {
+  const src = safeURL(web.icono);
+  return src
+    ? `<img class="web-icon" src="${escapeHTML(src)}"
+         width="28" height="28" alt="" loading="lazy">`
+    : '';
+};
   const webCard = (web,index) => `<article class="web-row"><span class="web-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><div><h3>${escapeHTML(web.titulo)}</h3><p>${escapeHTML(web.descripcion)}</p><span class="web-author">Autoría: ${escapeHTML(web.autor || 'No indicada')}</span></div><span class="web-category">${escapeHTML(web.categoria)}</span>${link(web.url,'Visitar web') || '<span class="access">Enlace pendiente</span>'}</article>`;
   const renderInto = (id,items,render) => { if ($(id)) $(id).innerHTML = items.length ? items.map(render).join('') : '<p class="unpublished">Todavía no hay incorporaciones en esta sección.</p>'; };
   const demo = projects.some(p=>p.ejemplo);
