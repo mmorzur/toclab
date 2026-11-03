@@ -42,7 +42,12 @@
          width="28" height="28" alt="" loading="lazy">`
     : '';
 };
-  const webCard = (web,index) => `<article class="web-row"><span class="web-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><div><h3>${escapeHTML(web.titulo)}</h3><p>${escapeHTML(web.descripcion)}</p><span class="web-author">Autoría: ${escapeHTML(web.autor || 'No indicada')}</span></div><span class="web-category">${escapeHTML(web.categoria)}</span>${link(web.url,'Visitar web') || '<span class="access">Enlace pendiente</span>'}</article>`;
+  const webCard = (web,index) => `<article class="web-row"><span class="web-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><div>
+  <h3 class="web-title">
+  ${webIcon(web)}
+  <span>${escapeHTML(web.titulo)}</span>
+</h3>
+<p>${escapeHTML(web.descripcion)}</p><span class="web-author">Autoría: ${escapeHTML(web.autor || 'No indicada')}</span></div><span class="web-category">${escapeHTML(web.categoria)}</span>${link(web.url,'Visitar web') || '<span class="access">Enlace pendiente</span>'}</article>`;
   const renderInto = (id,items,render) => { if ($(id)) $(id).innerHTML = items.length ? items.map(render).join('') : '<p class="unpublished">Todavía no hay incorporaciones en esta sección.</p>'; };
   const demo = projects.some(p=>p.ejemplo);
   if ($('demoNotice')) $('demoNotice').hidden = !demo;
