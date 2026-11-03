@@ -3,7 +3,7 @@
    fechaAlta: fecha REAL de incorporación (AAAA-MM-DD), no de realización del trabajo.
    Las fechas vacías se ordenan al final, respetando el orden de este archivo.
    Proyectos: anio = curso académico; nivel = 3.º ESO; grupo = A (sin repetir el nivel).
-   ejemplo: true identifica una muestra; no lo quites hasta incorporar un trabajo real.
+   Publica únicamente trabajos reales y autorizados del alumnado.
    URL: HTTPS o ruta relativa; deja "" si no hay destino. Nunca añadas contraseñas. */
 window.SITE_DATA = {
   "limiteInicio": 3,
@@ -11,7 +11,7 @@ window.SITE_DATA = {
     {
       "id": "lectura-viva",
       "titulo": "Lectura Viva",
-      "resumen": "Lecturas didácticas personalizadas y seguimiento lector por grupos y niveles.",
+      "resumen": "Aplicación para crear lecturas didácticas adaptadas a distintos niveles y necesidades educativas. Permite organizar las actividades lectoras por grupos, trabajar con contenidos personalizados y realizar un seguimiento del progreso registrado.",
       "categoria": "Lectura",
       "icono": "book",
       "url": "https://lecturaviva.mmorzur733.workers.dev/",
@@ -23,7 +23,7 @@ window.SITE_DATA = {
     {
       "id": "enigma",
       "titulo": "Máquina Enigma",
-      "resumen": "Prototipo de seudonimización de documentos, hoja clave y restauración.",
+      "resumen": "Prototipo orientado a la seudonimización de documentos mediante la sustitución de información identificativa por referencias alternativas. Utiliza una hoja de correspondencias que permite recuperar posteriormente los datos originales. Se encuentra en fase de desarrollo y validación.",
       "categoria": "Privacidad",
       "icono": "key",
       "url": "https://maquina-enigma.mimozin.chatgpt.site",
@@ -35,7 +35,7 @@ window.SITE_DATA = {
     {
       "id": "acompana",
       "titulo": "Acompaña",
-      "resumen": "Asistente docente para preparar y revisar programas de refuerzo y profundización.",
+      "resumen": "Herramienta de apoyo para preparar y revisar programas educativos de refuerzo y profundización. Facilita la organización de la información y la elaboración estructurada de la documentación necesaria para estas actuaciones docentes.",
       "categoria": "Apoyo docente",
       "icono": "compass",
       "url": "https://acompana-los-colegiales.mimozin.chatgpt.site",
@@ -47,7 +47,7 @@ window.SITE_DATA = {
     {
       "id": "programador",
       "titulo": "Programador Séneca",
-      "resumen": "Apoyo a la elaboración y revisión de programaciones didácticas por apartados.",
+      "resumen": "Aplicación de apoyo a la elaboración y revisión de programaciones didácticas. Organiza sus contenidos por apartados y facilita la preparación de la documentación curricular, tomando como referencia la estructura de trabajo utilizada en el ámbito educativo andaluz.",
       "categoria": "Planificación",
       "icono": "grid",
       "url": "https://programador-seneca-colegiales.mimozin.chatgpt.site",
@@ -57,94 +57,33 @@ window.SITE_DATA = {
       "plataforma": "ChatGPT"
     }
   ],
-  "proyectos": [
-    {
-      "id": "web-divulgacion",
-      "titulo": "Web de divulgación científica",
-      "resumen": "Dos páginas conectadas para explicar un fenómeno científico de forma visual y clara.",
-      "descripcion": "Ejemplo de proyecto HTML y CSS con navegación, imágenes, estilos compartidos y una reflexión sobre las fuentes utilizadas. La ficha muestra cómo documentar un trabajo sin publicar datos del alumnado.",
-      "materia": "Computación y Robótica",
-      "anio": "2026/27",
-      "etiquetas": [
-        "HTML",
-        "CSS",
-        "Web"
-      ],
-      "icono": "web",
-      "url": "",
-      "codigo": "",
-      "nivel": "3.º ESO",
-      "grupo": "",
-      "fechaAlta": "",
-      "ejemplo": true
-    },
-    {
-      "id": "robot-obstaculos",
-      "titulo": "Robot que detecta obstáculos",
-      "resumen": "Programación por bloques, lectura del sensor y pruebas de respuesta automática.",
-      "descripcion": "Ficha ilustrativa de un sistema robótico con una entrada, una decisión y una salida. Puede enlazar a una página de documentación, un vídeo autorizado o una simulación.",
-      "materia": "Computación y Robótica",
-      "anio": "2025/26",
-      "etiquetas": [
-        "Robótica",
-        "Sensores",
-        "MakeCode"
-      ],
-      "icono": "robot",
-      "url": "",
-      "codigo": "",
-      "nivel": "2.º ESO",
-      "grupo": "",
-      "fechaAlta": "",
-      "ejemplo": true
-    },
-    {
-      "id": "economia-local",
-      "titulo": "Mapa de iniciativas locales",
-      "resumen": "Investigación y representación de propuestas de economía y emprendimiento.",
-      "descripcion": "Ejemplo de producto de investigación orientado a comparar iniciativas con indicadores definidos, citar fuentes y comunicar conclusiones.",
-      "materia": "Economía y Emprendimiento",
-      "anio": "2026/27",
-      "etiquetas": [
-        "Investigación",
-        "Datos",
-        "Entorno"
-      ],
-      "icono": "chart",
-      "url": "",
-      "codigo": "",
-      "nivel": "4.º ESO",
-      "grupo": "",
-      "fechaAlta": "",
-      "ejemplo": true
-    }
-  ],
+  "proyectos": [],
   "webs": [
     {
-      "categoria": "DESARROLLO WEB",
+      "categoria": "Desarrollo web",
       "titulo": "MDN Web Docs",
    "icono": "assets/icons/mdn.jpg",
-      "descripcion": "Referencia sobre HTML, CSS y JavaScript.",
+      "descripcion": "Documentación de referencia sobre HTML, CSS y JavaScript. Incluye explicaciones técnicas, ejemplos de código y guías para desarrollar páginas y aplicaciones web.",
       "url": "https://developer.mozilla.org/es/docs/Web",
       "id": "mdn",
       "autor": "Mozilla y comunidad MDN",
       "fechaAlta": ""
     },
     {
-      "categoria": "COMPUTACIÓN FÍSICA",
+      "categoria": "Programación",
       "titulo": "MakeCode micro:bit",
    "icono": "assets/icons/microbit.png",
-      "descripcion": "Programación visual y simulador para micro:bit.",
+      "descripcion": "Entorno de programación visual por bloques para micro:bit. Incorpora un simulador que permite crear y comprobar programas antes de transferirlos a la placa física.",
       "url": "https://makecode.microbit.org/",
       "id": "makecode",
       "autor": "Microsoft MakeCode",
       "fechaAlta": ""
     },
     {
-      "categoria": "APPS",
+      "categoria": "Programación",
       "titulo": "MIT App Inventor",
    "icono": "assets/icons/mitai.png",
-      "descripcion": "Entorno visual para construir aplicaciones.",
+      "descripcion": "Plataforma de desarrollo visual para crear aplicaciones móviles mediante bloques de programación. Permite diseñar interfaces, incorporar componentes y programar su comportamiento.",
       "url": "https://appinventor.mit.edu/",
       "id": "appinventor",
       "autor": "MIT App Inventor",
@@ -154,70 +93,70 @@ window.SITE_DATA = {
      */
 
 {
-  "categoria": "APPS",
+  "categoria": "Desarrollo web",
   "titulo": "HTML Color Codes",
    "icono": "assets/icons/htmlcolorcodes.jpg",
-  "descripcion": "Selector de colores y paletas con códigos HEX, RGB y HSL para diseño web.",
+  "descripcion": "Herramienta para seleccionar colores y trabajar con códigos HEX, RGB y HSL. Incluye recursos para crear y consultar paletas de colores utilizadas en diseño web.",
   "url": "https://htmlcolorcodes.com/",
   "id": "htmlcolorcodes",
   "autor": "Dixon & Moe",
   "fechaAlta": "2026-11-03"
 },
 {
-  "categoria": "APPS",
+  "categoria": "Diseño 3D",
   "titulo": "Layerling",
    "icono": "assets/icons/layerling.svg",
-  "descripcion": "Herramienta CAD en el navegador para diseñar modelos destinados a impresión 3D.",
+  "descripcion": "Herramienta de diseño CAD accesible desde el navegador para crear modelos tridimensionales. Orientada al diseño de piezas y objetos destinados a impresión 3D.",
   "url": "https://layerling.com/",
   "id": "layerling",
   "autor": "Colaboradores de layerling",
   "fechaAlta": "2026-11-03"
 },
 {
-  "categoria": "APPS",
+  "categoria": "Electrónica",
   "titulo": "Aprende Arduino",
    "icono": "assets/icons/arduino.png",
-  "descripcion": "Lecciones interactivas en 3D para iniciarse en Arduino, circuitos y componentes electrónicos.",
+  "descripcion": "Recurso interactivo para iniciarse en la electrónica y la programación con Arduino. Incluye representaciones tridimensionales y explicaciones sobre componentes, conexiones y circuitos.",
   "url": "https://learn-arduino-red.vercel.app/es/",
   "id": "learnarduino",
   "autor": "DilumSanjaya",
   "fechaAlta": "2026-11-03"
 },
 {
-  "categoria": "APPS",
+  "categoria": "Electrónica",
   "titulo": "ESP32 Labs",
    "icono": "assets/icons/esp32.png",
-  "descripcion": "Guía interactiva de ESP32-S3 con prácticas, simuladores y explicaciones del código.",
+  "descripcion": "Guía interactiva centrada en el microcontrolador ESP32-S3. Combina explicaciones de programación, ejemplos de código, prácticas y recursos de simulación.",
   "url": "https://esp-labs-web.vercel.app/#/?lang=es",
   "id": "esplabs",
   "autor": "agharsallah",
   "fechaAlta": "2026-11-03"
 },
 {
-  "categoria": "APPS",
+  "categoria": "Simulación",
   "titulo": "Nuclear Reactor Simulator",
    "icono": "assets/icons/dalton.png",
-  "descripcion": "Simulador educativo para explorar el funcionamiento y control de un reactor nuclear.",
+  "descripcion": "Simulador educativo que permite explorar el funcionamiento general de un reactor nuclear y los principios básicos relacionados con su operación y control.",
   "url": "https://dalton-nrs.manchester.ac.uk/",
   "id": "daltonnrs",
   "autor": "Dalton Nuclear Institute · Universidad de Manchester / PlayGen",
   "fechaAlta": "2026-11-03"
 },
 {
-  "categoria": "APPS",
+  "categoria": "Simulación",
    "icono": "assets/icons/picuino.png",
   "titulo": "Picuino · Simulador de neumática",
-  "descripcion": "Editor y simulador de circuitos neumáticos con válvulas, cilindros y ejemplos.",
+  "descripcion": "Editor y simulador para diseñar circuitos neumáticos utilizando elementos como válvulas y cilindros. Permite representar conexiones y comprobar el funcionamiento de los circuitos.",
   "url": "https://www.picuino.com/neumatic/index.html",
   "id": "picuinoneumatic",
   "autor": "Carlos Félix Pardo Martín",
   "fechaAlta": "2026-11-03"
 },
 {
-  "categoria": "APPS",
+  "categoria": "Electrónica",
    "icono": "assets/icons/circuits.png",
   "titulo": "Falstad CircuitJS",
-  "descripcion": "Editor y simulador de circuitos electrónicos con visualización animada de tensiones y corrientes.",
+  "descripcion": "Simulador interactivo de circuitos electrónicos que permite montar esquemas y observar su comportamiento. Incorpora una visualización animada de tensiones y corrientes.",
   "url": "https://www.falstad.com/circuit/circuitjs.html",
   "id": "falstadcircuitjs",
   "autor": "Paul Falstad e Iain Sharp",

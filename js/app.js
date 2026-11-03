@@ -67,9 +67,7 @@
   <span>${escapeHTML(web.titulo)}</span>
 </h3>
 <p>${escapeHTML(web.descripcion)}</p><span class="web-author">Autoría: ${escapeHTML(web.autor || 'No indicada')}</span></div><span class="web-category">${escapeHTML(web.categoria)}</span>${link(web.url,'Visitar web') || '<span class="access">Enlace pendiente</span>'}</article>`;
-  const renderInto = (id,items,render) => { if ($(id)) $(id).innerHTML = items.length ? items.map(render).join('') : '<p class="unpublished">Todavía no hay incorporaciones en esta sección.</p>'; };
-  const demo = projects.some(p=>p.ejemplo);
-  if ($('demoNotice')) $('demoNotice').hidden = !demo;
+  const renderInto = (id,items,render,emptyMessage='Todavía no hay incorporaciones en esta sección.') => { if ($(id)) $(id).innerHTML = items.length ? items.map(render).join('') : `<p class="unpublished">${escapeHTML(emptyMessage)}</p>`; };
   if ($('menuToggle')) {
     const closeMenu = () => {$('mainNav').classList.remove('is-open');$('menuToggle').setAttribute('aria-expanded','false');};
     $('menuToggle').addEventListener('click',()=>{const open=$('mainNav').classList.toggle('is-open');$('menuToggle').setAttribute('aria-expanded',String(open));});
@@ -80,10 +78,11 @@
   if (page === 'home') {
     const limit = Number.isInteger(data.limiteInicio) && data.limiteInicio > 0 ? data.limiteInicio : 3;
     renderInto('latestApps',apps.slice(0,limit),appCard);
-    renderInto('latestProjects',projects.slice(0,limit),projectCard);
+    renderInto('latestProjects',projects.slice(0,limit),projectCard,'Esta sección se encuentra en preparación. Los proyectos se incorporarán progresivamente conforme estén documentados y disponibles para su publicación.');
     renderInto('latestWebs',webs.slice(0,limit),webCard);
     $('appsCount').textContent = `${apps.length} ${apps.length===1?'app':'apps'} en el laboratorio`;
-    $('projectsCount').textContent = projects.length && projects.every(p=>p.ejemplo) ? `${projects.length} fichas de ejemplo` : `${projects.filter(p=>!p.ejemplo).length} proyectos publicados`;
+    $('projectsCount').textContent = `${projects.filter(p=>!p.ejemplo).length} proyectos publicados`;
+    if (!projects.length && $('projectsCaptionLabel')) $('projectsCaptionLabel').textContent = 'Sección en preparación';
     $('websCount').textContent = `${webs.length} ${webs.length===1?'web seleccionada':'webs seleccionadas'}`;
   }
   if (['projects','lab','webs'].includes(page)) {
@@ -91,6 +90,10 @@
     const controls = page==='projects' ? {anio:$('yearSelect'),nivel:$('levelSelect'),grupo:$('groupSelect')} : page==='webs' ? {categoria:$('categorySelect')} : {};
     const placeholder = {anio:'Todos los cursos',nivel:'Todos los niveles',grupo:'Todos los grupos',categoria:'Todas las categorías'};
     const state = {q:'',anio:'',nivel:'',grupo:'',categoria:''};
+    if (page === 'projects' && !projects.length) {
+      $('projectFilterPanel').hidden = true;
+      $('projectsSortLabel').hidden = true;
+    }
     const groupOf = p => p.grupo || MISSING_GROUP;
     const options = (key,values) => {
       const select=controls[key];
@@ -121,6 +124,13 @@
         if(page==='webs'&&state.categoria&&item.categoria!==state.categoria)return false;
         return !state.q || normalize([item.titulo,item.resumen,item.descripcion,item.autor,item.categoria,item.estado,item.plataforma,item.materia,item.anio,item.nivel,item.grupo,...(item.etiquetas||[])].join(' ')).includes(normalize(state.q));
       });
+      if (page === 'projects' && !source.length) {
+        $('catalogGrid').hidden = true;
+        $('emptyState').hidden = true;
+        $('projectsPending').hidden = false;
+        $('resultCount').textContent = '0 proyectos publicados';
+        return;
+      }
       const renderer=page==='projects'?projectCard:page==='lab'?appCard:webCard;
       $('catalogGrid').innerHTML=filtered.map(renderer).join('');
       $('catalogGrid').hidden=filtered.length===0;
