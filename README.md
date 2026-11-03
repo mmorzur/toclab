@@ -22,7 +22,7 @@ El blog reúne contenidos propios y queda separado del catálogo de webs de otro
 
 ## Gestionar los contenidos
 
-Edita únicamente `js/data.js`. La navegación, los filtros y la portada se actualizan desde ese archivo; no hay que repetir las fichas en el HTML.
+Para editar las fichas, modifica `js/data.js`. La navegación, los filtros y las últimas incorporaciones de la portada se actualizan desde ese archivo; no hay que repetir las fichas en el HTML. Los textos de presentación se editan en la página correspondiente.
 
 - `apps`: aplicaciones propias.
 - `proyectos`: trabajos del alumnado.
@@ -30,6 +30,21 @@ Edita únicamente `js/data.js`. La navegación, los filtros y la portada se actu
 - `limiteInicio`: número máximo de fichas por sección en portada; por defecto, 3.
 
 Cada ficha lleva un `id` único, un título y los textos y enlaces adecuados a su catálogo. Las URL admiten HTTPS o rutas relativas. Una URL vacía muestra la ficha sin inventar un enlace.
+
+### Editar textos a mano en GitHub
+
+| Texto que se quiere cambiar | Archivo o campo |
+| --- | --- |
+| Titular, presentación y descripción del blog | `index.html` |
+| Introducciones de cada catálogo | `laboratorio.html`, `proyectos.html` o `webs.html` |
+| Descripción de una aplicación | `resumen` de su ficha en `js/data.js` |
+| Descripción de una web externa | `descripcion` de su ficha en `js/data.js` |
+| Pie de página y firma | Las cuatro páginas HTML |
+
+1. Abre el archivo en GitHub y pulsa el lápiz **Edit this file**.
+2. Busca la frase y modifica su contenido conservando etiquetas, identificadores y enlaces. En `js/data.js`, conserva las comillas y las comas; si necesitas comillas dentro de un texto, usa «comillas españolas».
+3. Pulsa **Commit changes**, guarda en `main` y espera a que finalice la publicación de GitHub Pages.
+4. Comprueba la página publicada. Si permanece la versión anterior, recarga la página; las versiones de los recursos se generan automáticamente.
 
 ### Incorporaciones recientes
 
@@ -83,7 +98,7 @@ Los filtros son **curso académico + nivel + grupo**, combinables con la búsque
 
 Los filtros quedan en la URL y se conservan al recargar o compartir el enlace. La búsqueda ignora mayúsculas y tildes. «Limpiar filtros» y el botón del estado sin resultados recuperan el listado completo.
 
-Se conservan **tres fichas de ejemplo** de la versión anterior, claramente identificadas y sin grupos inventados. Sustitúyelas por trabajos auténticos antes de usarlas como evidencia del trabajo del alumnado. El aviso desaparece automáticamente cuando ninguna ficha tiene `ejemplo: true`.
+Las **tres fichas de demostración se han retirado del catálogo público**. Mientras no existan proyectos reales, la portada y la página de proyectos muestran un aviso de sección en preparación; los filtros no se presentan vacíos. Incorpora únicamente trabajos documentados y autorizados para su publicación. El campo `ejemplo: false` se mantiene en el modelo de ficha para distinguir los proyectos auténticos de futuras muestras de prueba.
 
 Para publicar un proyecto HTML local, guarda sus archivos en una carpeta y usa una ruta como `proyectos/2026-27/3ESO-A/proyecto-01/index.html`. También puedes enlazar una web, documento, vídeo o repositorio que ya esté publicado.
 
@@ -93,7 +108,7 @@ Para publicar un proyecto HTML local, guarda sus archivos en una carpeta y usa u
 {
   id: "referencia-unica",
   titulo: "Nombre de la web",
-  descripcion: "Por qué puede resultar útil.",
+  descripcion: "Qué permite hacer y cuáles son sus funciones principales.",
   icono: "assets/icons/nombre-del-icono.png", // Opcional; ruta exacta del archivo subido.
   autor: "Autor, entidad o comunidad responsable",
   categoria: "DESARROLLO WEB",
@@ -102,7 +117,7 @@ Para publicar un proyecto HTML local, guarda sus archivos en una carpeta y usa u
 }
 ```
 
-El catálogo permite buscar por título, autor, descripción o categoría, y filtrar por categoría. Las diez referencias actuales incluyen las siete incorporadas el 03/11/2026.
+El catálogo permite buscar por título, autor, descripción o categoría, y filtrar por categoría. Sus diez recursos están clasificados como Desarrollo web, Programación, Diseño 3D, Electrónica o Simulación. Las siete incorporaciones más recientes se añadieron el 03/11/2026.
 
 ### Publicar una nueva web o un icono
 
