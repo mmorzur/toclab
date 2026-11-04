@@ -1267,7 +1267,12 @@ dialog::backdrop {
 .blog-callout:hover {
   border-color: var(--blue);
   box-shadow: 0 5px 18px #101b3008;
+  transform:translateY(-4px);
+
+  
 }
+
+
 .blog-symbol {
   display: flex;
   align-items: center;
