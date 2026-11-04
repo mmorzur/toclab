@@ -1391,3 +1391,17 @@ dialog::backdrop {
   color: var(--muted);
 }
 .web-icon-fallback svg { width: 20px; height: 20px; }
+
+/* Justificar texto */
+/* Justificación de las descripciones */
+.hero-lede,                    /* Introducción de portada */
+.section-head p:last-child,    /* Descripciones de secciones */
+.page-hero > p:last-child,     /* Introducciones de páginas */
+.app-card > p,                 /* Descripciones de apps */
+.project-body > p,             /* Descripciones de proyectos */
+.web-row p,                    /* Descripciones de webs */
+#dialogDescription {          /* Detalle del proyecto */
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+}
