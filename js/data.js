@@ -176,10 +176,30 @@ window.SITE_DATA = {
   "categoria": "Diseño 3D",
    "icono": "assets/icons/solidcraft.svg",
   "titulo": "SolidCraft",
-  "descripcion": "Crea bocetos, define dimensiones y construye piezas 3D con un historial de funciones editable. Trabaja en el editor o conecta un agente de IA a través de MCP..",
+  "descripcion": "Crea bocetos, define dimensiones y construye piezas 3D con un historial de funciones editable. Trabaja en el editor o conecta un agente de IA a través de MCP.",
   "url": "https://solidcraft.io/",
   "id": "solidcraft",
-  "autor": "-",
+  "autor": "Tangency Labs",
+  "fechaAlta": "2026-11-07"
+},
+{
+  "categoria": "Prompts presentaciones",
+   "icono": "assets/icons/github.png",
+  "titulo": "NotebookLM Slide Styles Collection",
+  "descripcion": "Una colección seleccionada de estilos de diseño visual (YAML) para personalizar la generación de diapositivas de NotebookLM.",
+  "url": "https://github.com/YamilAyma/notebooklm-prompt-styles",
+  "id": "notebooklmstylecollection",
+  "autor": "Yamil Ayma",
+  "fechaAlta": "2026-11-07"
+},
+{
+  "categoria": "Prompts presentaciones",
+   "icono": "assets/icons/github.png",
+  "titulo": "Awesome NotebookLM Templates",
+  "descripcion": "Una selección de las mejores ideas para diapositivas de NotebookLM y Kael.im, provenientes del auténtico underground creativo.",
+  "url": "https://github.com/serenakeyitan/awesome-notebookLM-prompts",
+  "id": "awesomenotebooklmprompts",
+  "autor": "Serena",
   "fechaAlta": "2026-11-07"
 }
      
