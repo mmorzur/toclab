@@ -174,7 +174,7 @@ window.SITE_DATA = {
 },
 {
   "categoria": "Diseño 3D",
-   "icono": "assets/icons/solidcracft.svg",
+   "icono": "assets/icons/solidcraft.svg",
   "titulo": "SolidCraft",
   "descripcion": "Crea bocetos, define dimensiones y construye piezas 3D con un historial de funciones editable. Trabaja en el editor o conecta un agente de IA a través de MCP..",
   "url": "https://solidcraft.io/",
