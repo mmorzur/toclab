@@ -161,6 +161,26 @@ window.SITE_DATA = {
   "id": "falstadcircuitjs",
   "autor": "Paul Falstad e Iain Sharp",
   "fechaAlta": "2026-11-03"
+},
+{
+  "categoria": "Estructuras",
+   "icono": "assets/icons/structtutor.jpeg",
+  "titulo": "StructTutor",
+  "descripcion": "Herramientas de resolución con fines educativos para estudiantes de Ingeniería Civil.",
+  "url": "https://www.structtutor.com/",
+  "id": "tsructtutor",
+  "autor": "-",
+  "fechaAlta": "2026-11-07"
+},
+{
+  "categoria": "Diseño 3D",
+   "icono": "assets/icons/solidcracft.svg",
+  "titulo": "SolidCraft",
+  "descripcion": "Crea bocetos, define dimensiones y construye piezas 3D con un historial de funciones editable. Trabaja en el editor o conecta un agente de IA a través de MCP..",
+  "url": "https://solidcraft.io/",
+  "id": "solidcraft",
+  "autor": "-",
+  "fechaAlta": "2026-11-07"
 }
      
   ]
