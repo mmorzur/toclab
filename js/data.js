@@ -201,6 +201,16 @@ window.SITE_DATA = {
   "id": "awesomenotebooklmprompts",
   "autor": "Serena",
   "fechaAlta": "2026-11-07"
+},
+{
+  "categoria": "Electrónica",
+   "icono": "assets/icons/constructa.jpeg",
+  "titulo": "Constructa",
+  "descripcion": "Construir, cablear y programar un robot en 3D.",
+  "url": "https://constructa-page.atumx.in/",
+  "id": "constructa",
+  "autor": "AtumX",
+  "fechaAlta": "2026-11-09"
 }
      
   ]
